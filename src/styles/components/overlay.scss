@@ -1,0 +1,20 @@
+@use '../core/colors' as  *;
+@use '../core/functions' as  *;
+
+#overlay {
+  top: rem(67);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to bottom, $DarkBlue, hsla(233, 26%, 24%, 0.3));
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
