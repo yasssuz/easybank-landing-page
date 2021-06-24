@@ -1,0 +1,41 @@
+@use '../core/colors' as *;
+@use '../core/functions' as *;
+
+.hero {
+  &__image-area {
+    position: relative;
+
+    .mockups {
+      transform: translateY(-29%);
+      width: 100%;
+      position: absolute;
+    }
+
+    .bg {
+      width: 100%;
+    }
+  }
+
+  &__text-area {
+    padding: 0 24px;
+    text-align: center;
+
+    h1 {
+      font-weight: normal;
+      color: $DarkBlue;
+      font-size: rem(38);
+      margin-bottom: rem(20);
+    }
+
+    p {
+      font-size: rem(17);
+      color: $GrayishBlue;
+    }
+
+    a {
+      height: rem(45);
+      width: rem(165);
+      margin: rem(35) auto 0;
+    }
+  }
+}
