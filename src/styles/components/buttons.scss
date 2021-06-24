@@ -1,0 +1,18 @@
+@use '../core/colors' as *;
+@use '../core/functions' as *;
+
+.primary-btn {
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+  border-radius: 30px;
+  transition: filter 0.2s ease;
+  font-size: rem(16);
+  font-weight: 600;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
