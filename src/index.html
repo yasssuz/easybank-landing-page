@@ -4,25 +4,50 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
+  <head>
+    <title>EasyBank</title>
 
-<head>
-  <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles/index.scss" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  </head>
 
-  <link rel="stylesheet" href="./styles/index.scss">
-  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
-</head>
-
-<body>
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
     <![endif]-->
 
-  <script src="./scripts/app.js" type="module" async defer></script>
-</body>
+    <div id="overlay"></div>
 
+    <header class="header">
+      <img src="./assets/logo.svg" alt="easybank" class="header__logo" />
+      <button class="header__mobile-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="header__navigation">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </nav>
+      <a href="#" class="header__invite-link invite-btn">Request Invite</a>
+    </header>
+
+    <script src="./scripts/app.js" type="module" async defer></script>
+  </body>
 </html>
