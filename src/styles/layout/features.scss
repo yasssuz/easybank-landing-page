@@ -1,0 +1,47 @@
+@use '../core/colors' as *;
+@use '../core/functions' as *;
+
+.features {
+  margin-top: rem(80);
+  background: $LightGrayishBlue;
+  padding: rem(65) 24px;
+  text-align: center;
+
+  h2 {
+    font-size: rem(30);
+    font-weight: 400;
+    max-width: 15ch;
+    margin: 0 auto rem(22);
+    color: $DarkBlue;
+  }
+
+  p {
+    font-size: rem(16);
+    color: $GrayishBlue;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(50);
+
+    li {
+      img {
+        width: 72px;
+        height: 72px;
+      }
+
+      h3 {
+        font-weight: 400;
+        color: $DarkBlue;
+        font-size: rem(20);
+        margin: rem(20) 0;
+      }
+    }
+
+    li + li {
+      margin-top: rem(38);
+    }
+  }
+}
