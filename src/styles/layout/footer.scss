@@ -1,0 +1,48 @@
+@use '../core/colors' as *;
+@use '../core/functions' as *;
+
+.footer {
+  background: $DarkBlue;
+  display: grid;
+  justify-items: center;
+  padding: rem(35) 0;
+  gap: rem(33);
+
+  // &__logo {
+  //   margin-bottom: rem(30);
+  // }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+
+    svg + svg {
+      margin-left: rem(13);
+    }
+  }
+
+  &__navbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    a {
+      font-size: rem(15);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    a + a {
+      margin-top: rem(12);
+    }
+  }
+
+  &__invite-btn {
+    height: rem(40);
+    width: rem(160);
+  }
+
+  small {
+    color: #fff;
+  }
+}
