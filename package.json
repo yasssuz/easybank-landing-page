@@ -2,7 +2,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite serve src",
-    "build": "vite build",
+    "build": "vite build src",
     "serve": "vite preview"
   },
   "devDependencies": {
