@@ -10,6 +10,10 @@
   position: relative;
   z-index: 10;
 
+  @media screen and (min-width: 950px) {
+    height: 83px;
+  }
+
   &__logo {
     height: 23px;
   }
@@ -19,6 +23,10 @@
     cursor: pointer;
     background: transparent;
     border: none;
+
+    @media screen and (min-width: 700px) {
+      display: none;
+    }
 
     &.active {
       span:nth-of-type(1) {
@@ -63,6 +71,15 @@
     opacity: 0;
     z-index: 50;
 
+    @media screen and (min-width: 700px) {
+      flex-direction: row;
+      position: static;
+      visibility: visible;
+      opacity: 1;
+      width: unset;
+      padding: 0;
+    }
+
     &.active {
       left: 24px;
       opacity: 1;
@@ -79,14 +96,58 @@
         text-decoration: underline;
         transform: scale(1.1);
       }
+
+      @media screen and (min-width: 700px) {
+        font-size: rem(17);
+      }
+
+      @media screen and (min-width: 950px) {
+        color: $GrayishBlue;
+        position: relative;
+
+        &::after {
+          content: "";
+          background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+          display: block;
+          position: absolute;
+          bottom: rem(-27);
+          height: 3px;
+          width: 105%;
+          transform: scaleX(0);
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: $DarkBlue;
+
+          &::after {
+            transform: scale(1);
+            transition: transform 0.2s ease;
+          }
+        }
+      }
     }
 
     a + a {
       margin-top: rem(25);
+
+      @media screen and (min-width: 700px) {
+        margin: 0 0 0 rem(22);
+      }
+
+      @media screen and (min-width: 950px) {
+        margin: 0 0 0 rem(30);
+      }
     }
   }
 
   &__invite-link {
     display: none;
+
+    @media screen and (min-width: 950px) {
+      display: grid;
+      height: rem(45);
+      width: rem(160);
+    }
   }
 }
