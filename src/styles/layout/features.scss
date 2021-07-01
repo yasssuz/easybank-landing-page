@@ -2,29 +2,61 @@
 @use '../core/functions' as *;
 
 .features {
-  margin-top: rem(80);
   background: $LightGrayishBlue;
-  padding: rem(65) 24px;
   text-align: center;
+  margin-top: rem(80);
+  padding: rem(65) 24px;
+
+  @media screen and (min-width: 660px) {
+    padding: rem(65) 40px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    text-align: left;
+    padding: rem(105) 40px;
+  }
+
+  @media screen and (min-width: 1350px) {
+    padding: rem(105) calc((100vw - 1280px) / 2);
+  }
 
   h2 {
-    font-size: rem(30);
+    font-size: clamp(1.875rem, 8vw, 2.5rem);
     font-weight: 400;
     max-width: 15ch;
-    margin: 0 auto rem(22);
+    margin: 0 auto clamp(1.375rem, 5vw, 1.875rem);
     color: $DarkBlue;
+
+    @media screen and (min-width: 690px) {
+      max-width: unset;
+    }
   }
 
   p {
-    font-size: rem(16);
+    font-size: clamp(1rem, 5vw, 1.0625rem);
     color: $GrayishBlue;
+    max-width: 60ch;
+    margin: auto;
+
+    @media screen and (min-width: 1000px) {
+      margin: 0;
+    }
   }
 
   &__list {
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: rem(38);
     margin-top: rem(50);
+
+    @media screen and (min-width: 660px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1000px) {
+      margin-top: rem(75);
+      grid-template-columns: repeat(4, 1fr);
+    }
 
     li {
       img {
@@ -35,13 +67,14 @@
       h3 {
         font-weight: 400;
         color: $DarkBlue;
-        font-size: rem(20);
+        font-size: clamp(1.25rem, 3vw, 1.4375rem);
         margin: rem(20) 0;
       }
-    }
 
-    li + li {
-      margin-top: rem(38);
+      p {
+        font-size: 1rem;
+        max-width: 40ch;
+      }
     }
   }
 }
