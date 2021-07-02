@@ -5,16 +5,34 @@
   background: $DarkBlue;
   display: grid;
   justify-items: center;
-  padding: rem(35) 0;
+  padding: rem(35) 24px;
   gap: rem(33);
 
-  // &__logo {
-  //   margin-bottom: rem(30);
-  // }
+  @media screen and (min-width: 660px) {
+    padding: rem(35) 40px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    grid-template-columns: 1fr 8fr 1fr;
+    gap: 0 rem(145);
+  }
+
+  @media screen and (min-width: 1350px) {
+    padding: rem(55) calc((100vw - 1280px) / 2);
+
+    &__logo {
+      justify-self: start;
+    }
+  }
 
   &__socials {
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 1000px) {
+      margin-top: rem(51);
+      grid-column: 1 /2;
+    }
 
     svg + svg {
       margin-left: rem(13);
@@ -25,21 +43,39 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: rem(12);
+
+    @media screen and (min-width: 1000px) {
+      grid-column: 2 /3;
+      grid-row: 1 /3;
+      grid-template-columns: repeat(2, 1fr);
+      justify-self: left;
+      text-align: left;
+      justify-items: unset;
+      gap: rem(20) rem(100);
+    }
 
     a {
       font-size: rem(15);
       color: #fff;
       text-decoration: none;
-    }
 
-    a + a {
-      margin-top: rem(12);
+      @media screen and (min-width: 1000px) {
+        font-size: rem(17);
+      }
     }
   }
 
   &__invite-btn {
     height: rem(40);
     width: rem(160);
+
+    @media screen and (min-width: 1000px) {
+      grid-column: 3 /4;
+      grid-row: 1 /2;
+      margin-bottom: rem(30);
+      align-self: end;
+    }
   }
 
   small {
