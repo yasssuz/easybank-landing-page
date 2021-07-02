@@ -1,6 +1,6 @@
-import { handleToggler } from "./handleToggler";
-import { getQuery } from "./utils";
+import handleToggler from './handleToggler';
+import getQuery from './utils';
 
-const toggler = getQuery('.header__mobile-toggler')
+const toggler = getQuery('.header__mobile-toggler');
 
-toggler.addEventListener('click', () => handleToggler(toggler))
+toggler.addEventListener('click', () => handleToggler(toggler));

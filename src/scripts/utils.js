@@ -1,3 +1,3 @@
-export function getQuery(q) {
-  return document.querySelector(q)
+export default function getQuery(q) {
+  return document.querySelector(q);
 }
