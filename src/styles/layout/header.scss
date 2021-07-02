@@ -14,6 +14,14 @@
     height: 83px;
   }
 
+  @media screen and (min-width: 660px) {
+    padding: rem(22) 40px;
+  }
+
+  @media screen and (min-width: 1350px) {
+    padding: rem(22) calc((100vw - 1280px) / 2);
+  }
+
   &__logo {
     height: 23px;
   }
