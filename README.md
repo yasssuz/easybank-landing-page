@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/mobile-first-scss-and-javascript-landing-page-bundled-with-vitejs-6BwnCjJcd](https://www.frontendmentor.io/solutions/mobile-first-scss-and-javascript-landing-page-bundled-with-vitejs-6BwnCjJcd)
 - Live Site URL: [https://easybank-landing-page-henna.vercel.app/](https://easybank-landing-page-henna.vercel.app/)
 
 ## My process
@@ -50,4 +50,4 @@ Users should be able to:
 
 ### Continued development
 
-The hero section, omg.... Very hard! I was dealing with overflows, z-index, a lot of stuff that complicated everything lol! But that's it, I feel way more comfortable to work with that weird stuff now. Im still working in a few more projects and i will deploy then soon!
+The hero section, omg.... Very hard! I was dealing with overflows, z-index, a lot of stuff that complicated everything lol! But that's it, I feel way more comfortable working with that weird stuff now. I'm still working on a few more projects and I will deploy them soon!
