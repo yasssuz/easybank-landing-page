@@ -17,4 +17,8 @@
     visibility: visible;
     opacity: 1;
   }
+
+  @media screen and (min-width: 660px) {
+    display: none;
+  }
 }
