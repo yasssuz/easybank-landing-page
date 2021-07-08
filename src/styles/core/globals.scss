@@ -9,11 +9,20 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #fafafa;
-  font-family: "Public Sans", sans-serif;
-}
+html {
+  overflow-x: hidden;
 
-html.navbar-active {
-  overflow: hidden;
+  &,
+  body {
+    position: relative;
+  }
+
+  &.navbar-active {
+    overflow: hidden;
+  }
+
+  body {
+    background: #fafafa;
+    font-family: "Public Sans", sans-serif;
+  }
 }
