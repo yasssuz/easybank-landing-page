@@ -2,6 +2,19 @@
 @use '../core/functions' as *;
 
 .hero {
+  padding: 0 calc((100vw - 1280px) / 2);
+
+  @media screen and (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 660px;
+
+    div:first-of-type {
+      grid-column: 2 /3;
+      grid-row: 1;
+    }
+  }
+
   &__image-area {
     position: relative;
 
@@ -9,10 +22,20 @@
       transform: translateY(-29%);
       width: 100%;
       position: absolute;
+
+      @media screen and (min-width: 1000px) {
+        z-index: 2;
+        width: 750px;
+        transform: translateY(-120px) translateX(180px);
+        z-index: 3;
+      }
     }
 
     .bg {
       &.desktop {
+        position: absolute;
+        top: -260px;
+
         @media screen and (max-width: 1000px) {
           display: none;
         }
@@ -32,22 +55,46 @@
     padding: 0 24px;
     text-align: center;
 
+    @media screen and (min-width: 1000px) {
+      align-self: center;
+      text-align: left;
+      padding: 0 0 0 40px;
+    }
+
+    @media screen and (min-width: 1350px) {
+      padding-left: 0;
+    }
+
     h1 {
       font-weight: normal;
       color: $DarkBlue;
-      font-size: rem(38);
+      font-size: clamp(2.375rem, 5vw, 3.4375rem);
       margin-bottom: rem(20);
+
+      @media screen and (min-width: 1000px) {
+        max-width: 15ch;
+      }
     }
 
     p {
       font-size: rem(17);
       color: $GrayishBlue;
+
+      @media screen and (min-width: 1000px) {
+        max-width: 50ch;
+        font-size: rem(18);
+        line-height: 1.7;
+      }
     }
 
     a {
       height: rem(45);
       width: rem(165);
       margin: rem(35) auto 0;
+
+      @media screen and (min-width: 1000px) {
+        margin: rem(35) 0;
+      }
     }
   }
 }
